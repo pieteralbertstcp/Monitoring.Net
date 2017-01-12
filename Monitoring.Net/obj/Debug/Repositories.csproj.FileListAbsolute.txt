@@ -1,0 +1,8 @@
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Monitoring.Net\bin\Debug\Monitoring.Net.dll.config
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Monitoring.Net\bin\Debug\Monitoring.Net.dll
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Monitoring.Net\bin\Debug\Monitoring.Net.pdb
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Monitoring.Net\bin\Debug\EntityFramework.dll
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Monitoring.Net\bin\Debug\EntityFramework.xml
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Monitoring.Net\obj\Debug\Repositories.csprojResolveAssemblyReference.cache
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Monitoring.Net\obj\Debug\Monitoring.Net.dll
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Monitoring.Net\obj\Debug\Monitoring.Net.pdb

@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MysqlModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="job">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="code_reference" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="last_updated" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="jobs_log" Relationship="Self.jobs_log_ibfk_1" FromRole="jobs" ToRole="jobs_log" />
+    <NavigationProperty Name="jobs_scheduled" Relationship="Self.jobs_scheduled_ibfk_1" FromRole="jobs" ToRole="jobs_scheduled" />
+  </EntityType>
+  <EntityType Name="jobs_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="job_id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="result_message" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="job_status_id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="last_updated" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="job" Relationship="Self.jobs_log_ibfk_1" FromRole="jobs_log" ToRole="jobs" />
+    <NavigationProperty Name="jobs_status" Relationship="Self.jobs_log_ibfk_2" FromRole="jobs_log" ToRole="jobs_status" />
+  </EntityType>
+  <EntityType Name="jobs_scheduled">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="job_id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="network_device_id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="cron" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="current_job_status_id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="last_updated" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="job" Relationship="Self.jobs_scheduled_ibfk_1" FromRole="jobs_scheduled" ToRole="jobs" />
+    <NavigationProperty Name="jobs_status" Relationship="Self.jobs_scheduled_ibfk_2" FromRole="jobs_scheduled" ToRole="jobs_status" />
+    <NavigationProperty Name="network_devices" Relationship="Self.jobs_scheduled_ibfk_3" FromRole="jobs_scheduled" ToRole="network_devices" />
+  </EntityType>
+  <EntityType Name="jobs_status">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="jobs_log" Relationship="Self.jobs_log_ibfk_2" FromRole="jobs_status" ToRole="jobs_log" />
+    <NavigationProperty Name="jobs_scheduled" Relationship="Self.jobs_scheduled_ibfk_2" FromRole="jobs_status" ToRole="jobs_scheduled" />
+  </EntityType>
+  <EntityType Name="network_devices">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ipv4_or_dns" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="username" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="port_number" Type="Int32" />
+    <Property Name="last_updated" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="jobs_scheduled" Relationship="Self.jobs_scheduled_ibfk_3" FromRole="network_devices" ToRole="jobs_scheduled" />
+  </EntityType>
+  <Association Name="jobs_log_ibfk_1">
+    <End Role="jobs" Type="Self.job" Multiplicity="0..1" />
+    <End Role="jobs_log" Type="Self.jobs_log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="jobs">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="jobs_log">
+        <PropertyRef Name="job_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="jobs_scheduled_ibfk_1">
+    <End Role="jobs" Type="Self.job" Multiplicity="0..1" />
+    <End Role="jobs_scheduled" Type="Self.jobs_scheduled" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="jobs">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="jobs_scheduled">
+        <PropertyRef Name="job_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="jobs_log_ibfk_2">
+    <End Role="jobs_status" Type="Self.jobs_status" Multiplicity="0..1" />
+    <End Role="jobs_log" Type="Self.jobs_log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="jobs_status">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="jobs_log">
+        <PropertyRef Name="job_status_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="jobs_scheduled_ibfk_2">
+    <End Role="jobs_status" Type="Self.jobs_status" Multiplicity="0..1" />
+    <End Role="jobs_scheduled" Type="Self.jobs_scheduled" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="jobs_status">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="jobs_scheduled">
+        <PropertyRef Name="current_job_status_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="jobs_scheduled_ibfk_3">
+    <End Role="network_devices" Type="Self.network_devices" Multiplicity="0..1" />
+    <End Role="jobs_scheduled" Type="Self.jobs_scheduled" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="network_devices">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="jobs_scheduled">
+        <PropertyRef Name="network_device_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MySqlEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="jobs" EntityType="Self.job" />
+    <EntitySet Name="jobs_log" EntityType="Self.jobs_log" />
+    <EntitySet Name="jobs_scheduled" EntityType="Self.jobs_scheduled" />
+    <EntitySet Name="jobs_status" EntityType="Self.jobs_status" />
+    <EntitySet Name="network_devices" EntityType="Self.network_devices" />
+    <AssociationSet Name="jobs_log_ibfk_1" Association="Self.jobs_log_ibfk_1">
+      <End Role="jobs" EntitySet="jobs" />
+      <End Role="jobs_log" EntitySet="jobs_log" />
+    </AssociationSet>
+    <AssociationSet Name="jobs_scheduled_ibfk_1" Association="Self.jobs_scheduled_ibfk_1">
+      <End Role="jobs" EntitySet="jobs" />
+      <End Role="jobs_scheduled" EntitySet="jobs_scheduled" />
+    </AssociationSet>
+    <AssociationSet Name="jobs_log_ibfk_2" Association="Self.jobs_log_ibfk_2">
+      <End Role="jobs_status" EntitySet="jobs_status" />
+      <End Role="jobs_log" EntitySet="jobs_log" />
+    </AssociationSet>
+    <AssociationSet Name="jobs_scheduled_ibfk_2" Association="Self.jobs_scheduled_ibfk_2">
+      <End Role="jobs_status" EntitySet="jobs_status" />
+      <End Role="jobs_scheduled" EntitySet="jobs_scheduled" />
+    </AssociationSet>
+    <AssociationSet Name="jobs_scheduled_ibfk_3" Association="Self.jobs_scheduled_ibfk_3">
+      <End Role="network_devices" EntitySet="network_devices" />
+      <End Role="jobs_scheduled" EntitySet="jobs_scheduled" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

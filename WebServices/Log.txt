@@ -1,0 +1,25 @@
+iisexpress.exe Error: 0 : Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'hangfire'
+iisexpress.exe Error: 0 : Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'hangfire'
+iisexpress.exe Error: 0 : Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'hangfire'
+iisexpress.exe Error: 0 : Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'hangfire'
+iisexpress.exe Error: 0 : Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'hangfire'
+iisexpress.exe Error: 0 : Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'hangfire'
+iisexpress.exe Error: 0 : Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'hangfire'
+iisexpress.exe Error: 0 : Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'hangfire'
+iisexpress.exe Error: 0 : Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'hangfire'
+iisexpress.exe Error: 0 : Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'hangfire'
+Announce server desktop-mms8fv4:5060:9b5b763b-c85b-40b7-ae83-c7ff8632c611
+Announce server desktop-mms8fv4:5152:401abcf1-5ea4-4677-9a9e-328a975c5b40
+iisexpress.exe Error: 0 : Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Access denied for user 'root'@'localhost' (using password: YES)
+Announce server msi:11280:883e8e18-7737-4349-beb7-af6936c8f472
+Announce server msi:11280:883e8e18-7737-4349-beb7-af6936c8f472
+Announce server msi:11280:883e8e18-7737-4349-beb7-af6936c8f472
+Announce server msi:11280:883e8e18-7737-4349-beb7-af6936c8f472
+Announce server msi:11280:883e8e18-7737-4349-beb7-af6936c8f472
+iisexpress.exe Error: 0 : Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'hangfire'
+Announce server msi:10000:c901ca4b-c5a6-4c6c-a5ac-396d5a1a0f62
+Announce server msi:10000:c901ca4b-c5a6-4c6c-a5ac-396d5a1a0f62
+Announce server msi:10000:c901ca4b-c5a6-4c6c-a5ac-396d5a1a0f62
+iisexpress.exe Error: 0 : Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'hangfire'
+iisexpress.exe Error: 0 : Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'hangfire'
+iisexpress.exe Error: 0 : Authentication to host 'localhost' for user 'root' using method 'mysql_native_password' failed with message: Unknown database 'hangfire'

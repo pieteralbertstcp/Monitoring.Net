@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MysqlModelStoreContainer" CdmEntityContainer="MySqlEntities">
+    <EntitySetMapping Name="jobs">
+      <EntityTypeMapping TypeName="MysqlModel.job">
+        <MappingFragment StoreEntitySet="jobs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="code_reference" ColumnName="code_reference" />
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jobs_log">
+      <EntityTypeMapping TypeName="MysqlModel.jobs_log">
+        <MappingFragment StoreEntitySet="jobs_log">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="job_id" ColumnName="job_id" />
+          <ScalarProperty Name="result_message" ColumnName="result_message" />
+          <ScalarProperty Name="job_status_id" ColumnName="job_status_id" />
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jobs_scheduled">
+      <EntityTypeMapping TypeName="MysqlModel.jobs_scheduled">
+        <MappingFragment StoreEntitySet="jobs_scheduled">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="job_id" ColumnName="job_id" />
+          <ScalarProperty Name="network_device_id" ColumnName="network_device_id" />
+          <ScalarProperty Name="cron" ColumnName="cron" />
+          <ScalarProperty Name="current_job_status_id" ColumnName="current_job_status_id" />
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="jobs_status">
+      <EntityTypeMapping TypeName="MysqlModel.jobs_status">
+        <MappingFragment StoreEntitySet="jobs_status">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="network_devices">
+      <EntityTypeMapping TypeName="MysqlModel.network_devices">
+        <MappingFragment StoreEntitySet="network_devices">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="ipv4_or_dns" ColumnName="ipv4_or_dns" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="port_number" ColumnName="port_number" />
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

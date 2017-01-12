@@ -1,0 +1,16 @@
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Interfaces\bin\Debug\Interfaces.dll
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Interfaces\bin\Debug\Interfaces.pdb
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Interfaces\obj\Debug\Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Interfaces\obj\Debug\Interfaces.dll
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Interfaces\obj\Debug\Interfaces.pdb
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Interfaces\bin\Debug\Interfaces.dll.config
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Interfaces\bin\Debug\Dapper.dll
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Interfaces\bin\Debug\Hangfire.Core.dll
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Interfaces\bin\Debug\Hangfire.MySql.dll
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Interfaces\bin\Debug\MySql.Data.dll
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Interfaces\bin\Debug\Newtonsoft.Json.dll
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Interfaces\bin\Debug\Owin.dll
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Interfaces\bin\Debug\Dapper.pdb
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Interfaces\bin\Debug\Dapper.xml
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Interfaces\bin\Debug\Hangfire.Core.xml
+C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Interfaces\bin\Debug\Newtonsoft.Json.xml
