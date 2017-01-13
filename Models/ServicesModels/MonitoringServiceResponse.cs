@@ -1,6 +1,6 @@
-﻿namespace Interfaces.Services
+﻿namespace Models.ServicesModels
 {
-    public class MonitoringServiceResponse
+    public struct MonitoringServiceResponse
     {
         public string Id { get; set; }
         public string Host { get; set; }

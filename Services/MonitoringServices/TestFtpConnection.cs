@@ -2,11 +2,12 @@
 using System.Diagnostics;
 using System.Net;
 using Interfaces.Services;
+using Models.ServicesModels;
 
 namespace Services.MonitoringServices
 {
 
-    public class TestFtpConnection : IBasicService
+    public sealed class TestFtpConnection : IBasicService
     {
         /// <summary>
         /// Used to check if a FTP connection can be made to the desired host.

@@ -2,10 +2,11 @@
 using System.Diagnostics;
 using System.Net.NetworkInformation;
 using Interfaces.Services;
+using Models.ServicesModels;
 
 namespace Services.MonitoringServices
 {
-    public class PingIp : IBasicService
+    public sealed class PingIp : IBasicService
     {
         /// <summary>
         /// Used to ping a hostname or IP address.

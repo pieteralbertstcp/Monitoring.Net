@@ -2,10 +2,11 @@
 using System.Diagnostics;
 using System.Net;
 using Interfaces.Services;
+using Models.ServicesModels;
 
 namespace Services.MonitoringServices
 {
-    public class IsWebsiteAlive : IBasicService
+    public sealed class IsWebsiteAlive : IBasicService
     {
         /// <summary>
         /// Used to test if a website is alive. Checks for 200 status code.

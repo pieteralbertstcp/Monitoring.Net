@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="emaill\emailProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServicesModels\MonitoringService.cs" />
     <Compile Include="ServicesModels\MonitoringServiceJob.cs" />

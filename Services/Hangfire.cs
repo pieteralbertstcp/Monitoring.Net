@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using Hangfire;
 using Interfaces.Services;
+using Models.ServicesModels;
 
 namespace Services
 {
@@ -22,6 +23,11 @@ namespace Services
             }
         }
         
+        /// <summary>
+        /// This is the hangfire function that executes all jobs via reflection.
+        /// </summary>
+        /// <param name="job"></param>
+        /// <param name="className"></param>
         public void ExcecuteJob(MonitoringServiceJob job, string className)
         {
             try
@@ -50,6 +56,10 @@ namespace Services
             }
         }
 
+        /// <summary>
+        /// Saves the job results to DB.
+        /// </summary>
+        /// <param name="result"></param>
         private static void SaveJobResults(MonitoringServiceResponse result)
         {
             

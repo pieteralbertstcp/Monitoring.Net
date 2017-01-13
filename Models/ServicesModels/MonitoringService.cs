@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Interfaces.Services
+﻿namespace Models.ServicesModels
 {
-    public class MonitoringService
+    public struct MonitoringService
     {
         public string Id { get; set; }
         public string Description { get; set; }
