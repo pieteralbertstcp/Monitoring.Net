@@ -18,3 +18,24 @@ C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Ser
 C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Services\bin\Debug\MySql.Data.dll
 C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Services\bin\Debug\Dapper.pdb
 C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Services\bin\Debug\Dapper.xml
+C:\DEV\Monitoring.Net\Services\bin\Debug\Services.dll.config
+C:\DEV\Monitoring.Net\Services\bin\Debug\Services.dll
+C:\DEV\Monitoring.Net\Services\bin\Debug\Services.pdb
+C:\DEV\Monitoring.Net\Services\bin\Debug\Hangfire.Core.dll
+C:\DEV\Monitoring.Net\Services\bin\Debug\Interfaces.dll
+C:\DEV\Monitoring.Net\Services\bin\Debug\Models.dll
+C:\DEV\Monitoring.Net\Services\bin\Debug\Newtonsoft.Json.dll
+C:\DEV\Monitoring.Net\Services\bin\Debug\Owin.dll
+C:\DEV\Monitoring.Net\Services\bin\Debug\Interfaces.pdb
+C:\DEV\Monitoring.Net\Services\bin\Debug\Models.pdb
+C:\DEV\Monitoring.Net\Services\bin\Debug\Hangfire.Core.xml
+C:\DEV\Monitoring.Net\Services\bin\Debug\es\Hangfire.Core.resources.dll
+C:\DEV\Monitoring.Net\Services\bin\Debug\zh\Hangfire.Core.resources.dll
+C:\DEV\Monitoring.Net\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+C:\DEV\Monitoring.Net\Services\obj\Debug\Services.dll
+C:\DEV\Monitoring.Net\Services\obj\Debug\Services.pdb
+C:\DEV\Monitoring.Net\Services\bin\Debug\MySql.Data.dll
+C:\DEV\Monitoring.Net\Services\bin\Debug\EntityFramework.dll
+C:\DEV\Monitoring.Net\Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\DEV\Monitoring.Net\Services\bin\Debug\EntityFramework.xml
+C:\DEV\Monitoring.Net\Services\bin\Debug\EntityFramework.SqlServer.xml

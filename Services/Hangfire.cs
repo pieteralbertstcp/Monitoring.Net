@@ -10,17 +10,17 @@ namespace Services
     {
         public void LoadAllHangFireJobs()
         {
-            try
+           /* try
             {
                 for (int i = 0; i < UPPER; i++)
                 {
-                    RecurringJob.AddOrUpdate(i + " ClassName" +  " - IP", () => new Hangfire().ExcecuteJob("TEST", "localhost", "Network.IsAddressPingable"), "*/5 * * * *", TimeZoneInfo.Local);        
+                    RecurringJob.AddOrUpdate(i + " ClassName" +  " - IP", () => new Hangfire().ExcecuteJob("TEST", "localhost", "Network.IsAddressPingable"), "#1#5 * * * *", TimeZoneInfo.Local);        
                 }
             }
             catch (Exception ex)
             {
                 Mail.SendMailNotification(ex);
-            }
+            }*/
         }
         
         /// <summary>

@@ -6,3 +6,23 @@ C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Mon
 C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Monitoring.Net\obj\Debug\Repositories.csprojResolveAssemblyReference.cache
 C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Monitoring.Net\obj\Debug\Monitoring.Net.dll
 C:\Users\pieter.alberts\Documents\Visual Studio 2013\Projects\Monitoring.Net\Monitoring.Net\obj\Debug\Monitoring.Net.pdb
+C:\DEV\Monitoring.Net\Monitoring.Net\bin\Debug\Monitoring.Net.dll.config
+C:\DEV\Monitoring.Net\Monitoring.Net\bin\Debug\Monitoring.Net.dll
+C:\DEV\Monitoring.Net\Monitoring.Net\bin\Debug\Monitoring.Net.pdb
+C:\DEV\Monitoring.Net\Monitoring.Net\bin\Debug\Dapper.dll
+C:\DEV\Monitoring.Net\Monitoring.Net\bin\Debug\EntityFramework.dll
+C:\DEV\Monitoring.Net\Monitoring.Net\bin\Debug\EntityFramework.SqlServer.dll
+C:\DEV\Monitoring.Net\Monitoring.Net\bin\Debug\Hangfire.Core.dll
+C:\DEV\Monitoring.Net\Monitoring.Net\bin\Debug\Hangfire.MySql.dll
+C:\DEV\Monitoring.Net\Monitoring.Net\bin\Debug\Newtonsoft.Json.dll
+C:\DEV\Monitoring.Net\Monitoring.Net\bin\Debug\Owin.dll
+C:\DEV\Monitoring.Net\Monitoring.Net\bin\Debug\Dapper.xml
+C:\DEV\Monitoring.Net\Monitoring.Net\bin\Debug\EntityFramework.xml
+C:\DEV\Monitoring.Net\Monitoring.Net\bin\Debug\EntityFramework.SqlServer.xml
+C:\DEV\Monitoring.Net\Monitoring.Net\bin\Debug\Hangfire.Core.xml
+C:\DEV\Monitoring.Net\Monitoring.Net\bin\Debug\Newtonsoft.Json.xml
+C:\DEV\Monitoring.Net\Monitoring.Net\bin\Debug\es\Hangfire.Core.resources.dll
+C:\DEV\Monitoring.Net\Monitoring.Net\bin\Debug\zh\Hangfire.Core.resources.dll
+C:\DEV\Monitoring.Net\Monitoring.Net\obj\Debug\Repositories.csprojResolveAssemblyReference.cache
+C:\DEV\Monitoring.Net\Monitoring.Net\obj\Debug\Monitoring.Net.dll
+C:\DEV\Monitoring.Net\Monitoring.Net\obj\Debug\Monitoring.Net.pdb

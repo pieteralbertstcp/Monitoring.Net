@@ -1,0 +1,12 @@
+C:\DEV\Monitoring.Net\Repositories\bin\Debug\Repositories.dll.config
+C:\DEV\Monitoring.Net\Repositories\bin\Debug\Repositories.dll
+C:\DEV\Monitoring.Net\Repositories\bin\Debug\Repositories.pdb
+C:\DEV\Monitoring.Net\Repositories\bin\Debug\EntityFramework.dll
+C:\DEV\Monitoring.Net\Repositories\bin\Debug\EntityFramework.SqlServer.dll
+C:\DEV\Monitoring.Net\Repositories\bin\Debug\MySql.Data.dll
+C:\DEV\Monitoring.Net\Repositories\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\DEV\Monitoring.Net\Repositories\bin\Debug\EntityFramework.xml
+C:\DEV\Monitoring.Net\Repositories\bin\Debug\EntityFramework.SqlServer.xml
+C:\DEV\Monitoring.Net\Repositories\obj\Debug\Repositories.csprojResolveAssemblyReference.cache
+C:\DEV\Monitoring.Net\Repositories\obj\Debug\Repositories.dll
+C:\DEV\Monitoring.Net\Repositories\obj\Debug\Repositories.pdb

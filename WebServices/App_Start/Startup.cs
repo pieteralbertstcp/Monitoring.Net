@@ -17,6 +17,7 @@ namespace WebServices.App_Start
         public void Configuration(IAppBuilder app)
         {
             GlobalJobFilters.Filters.Add(new AutomaticRetryAttribute { Attempts = 5 });
+            //TODO: Swop out the connection string for the 1 in the generic config
             JobStorage.Current = new MySqlStorage("server=localhost;uid=root;pwd=creative;database=hangfire;Allow User Variables=True");
             app.UseHangfireDashboard("/hangfire");
             new Services.Hangfire().LoadAllHangFireJobs();

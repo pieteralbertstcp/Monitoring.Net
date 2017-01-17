@@ -31,12 +31,14 @@ namespace Services
             SendEmail(subject, body, emailAddress.Split(',').ToList());
         }
 
+
         /// <summary>
         /// Send out exception email notifications to the sys adim specified in the system config
         /// </summary>
         /// <param name="exception"></param>
         public static void SendMailNotification(Exception exception)
         {
+            //TODO: Get the email from the generic cnfig
             var emailAddress = "";
             SendEmail("Exception occured - " + exception.GetType(), "Please note that the following exception occured: " + exception.GetBaseException().InnerException, emailAddress.Split(',').ToList());
         }

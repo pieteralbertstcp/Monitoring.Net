@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MonitoringModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="monitoringEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="config_attributes" EntityType="MonitoringModel.config_attributes" />
+    <EntitySet Name="config_attributes_values" EntityType="MonitoringModel.config_attributes_values" />
+    <EntitySet Name="monitoring_services" EntityType="MonitoringModel.monitoring_services" />
+    <EntitySet Name="monitoring_services_jobs" EntityType="MonitoringModel.monitoring_services_jobs" />
+    <EntitySet Name="monitoring_services_responses" EntityType="MonitoringModel.monitoring_services_responses" />
+    <AssociationSet Name="config_attributes_foreign_keys" Association="MonitoringModel.config_attributes_foreign_keys">
+      <End Role="config_attributes" EntitySet="config_attributes" />
+      <End Role="config_attributes_values" EntitySet="config_attributes_values" />
+    </AssociationSet>
+    <AssociationSet Name="monitoring_services_jobs_ibfk_1" Association="MonitoringModel.monitoring_services_jobs_ibfk_1">
+      <End Role="monitoring_services" EntitySet="monitoring_services" />
+      <End Role="monitoring_services_jobs" EntitySet="monitoring_services_jobs" />
+    </AssociationSet>
+    <AssociationSet Name="monitoring_services_responses_ibfk_1" Association="MonitoringModel.monitoring_services_responses_ibfk_1">
+      <End Role="monitoring_services_jobs" EntitySet="monitoring_services_jobs" />
+      <End Role="monitoring_services_responses" EntitySet="monitoring_services_responses" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="config_attributes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="attribute_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="last_updated" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="config_attributes_values" Relationship="MonitoringModel.config_attributes_foreign_keys" FromRole="config_attributes" ToRole="config_attributes_values" />
+  </EntityType>
+  <EntityType Name="config_attributes_values">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="attribute_value" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="config_attributes_id" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="last_updated" Type="DateTime" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="config_attributes" Relationship="MonitoringModel.config_attributes_foreign_keys" FromRole="config_attributes_values" ToRole="config_attributes" />
+  </EntityType>
+  <EntityType Name="monitoring_services">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="class_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="updated_on" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="monitoring_services_jobs" Relationship="MonitoringModel.monitoring_services_jobs_ibfk_1" FromRole="monitoring_services" ToRole="monitoring_services_jobs" />
+  </EntityType>
+  <EntityType Name="monitoring_services_jobs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="host" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="passwrd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="port" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="display_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="cron" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="execute_job" Type="Boolean" />
+    <Property Name="monitoring_services_id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="notify_on_failure" Type="Boolean" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="updated_on" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="monitoring_services" Relationship="MonitoringModel.monitoring_services_jobs_ibfk_1" FromRole="monitoring_services_jobs" ToRole="monitoring_services" />
+    <NavigationProperty Name="monitoring_services_responses" Relationship="MonitoringModel.monitoring_services_responses_ibfk_1" FromRole="monitoring_services_jobs" ToRole="monitoring_services_responses" />
+  </EntityType>
+  <EntityType Name="monitoring_services_responses">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="host" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="is_successful" Type="Boolean" />
+    <Property Name="passwrd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="port" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="miliseconds_response" Type="String" MaxLength="16777215" FixedLength="false" Unicode="false" />
+    <Property Name="message" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="monitoring_services_jobs_id" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="created_on" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="updated_on" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="monitoring_services_jobs" Relationship="MonitoringModel.monitoring_services_responses_ibfk_1" FromRole="monitoring_services_responses" ToRole="monitoring_services_jobs" />
+  </EntityType>
+  <Association Name="config_attributes_foreign_keys">
+    <End Type="MonitoringModel.config_attributes" Role="config_attributes" Multiplicity="1" />
+    <End Type="MonitoringModel.config_attributes_values" Role="config_attributes_values" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="config_attributes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="config_attributes_values">
+        <PropertyRef Name="config_attributes_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="monitoring_services_jobs_ibfk_1">
+    <End Type="MonitoringModel.monitoring_services" Role="monitoring_services" Multiplicity="0..1" />
+    <End Type="MonitoringModel.monitoring_services_jobs" Role="monitoring_services_jobs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="monitoring_services">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="monitoring_services_jobs">
+        <PropertyRef Name="monitoring_services_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="monitoring_services_responses_ibfk_1">
+    <End Type="MonitoringModel.monitoring_services_jobs" Role="monitoring_services_jobs" Multiplicity="0..1" />
+    <End Type="MonitoringModel.monitoring_services_responses" Role="monitoring_services_responses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="monitoring_services_jobs">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="monitoring_services_responses">
+        <PropertyRef Name="monitoring_services_jobs_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MonitoringModelStoreContainer" CdmEntityContainer="monitoringEntities">
+    <EntitySetMapping Name="config_attributes">
+      <EntityTypeMapping TypeName="MonitoringModel.config_attributes">
+        <MappingFragment StoreEntitySet="config_attributes">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="attribute_name" ColumnName="attribute_name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="config_attributes_values">
+      <EntityTypeMapping TypeName="MonitoringModel.config_attributes_values">
+        <MappingFragment StoreEntitySet="config_attributes_values">
+          <ScalarProperty Name="last_updated" ColumnName="last_updated" />
+          <ScalarProperty Name="config_attributes_id" ColumnName="config_attributes_id" />
+          <ScalarProperty Name="attribute_value" ColumnName="attribute_value" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="monitoring_services">
+      <EntityTypeMapping TypeName="MonitoringModel.monitoring_services">
+        <MappingFragment StoreEntitySet="monitoring_services">
+          <ScalarProperty Name="updated_on" ColumnName="updated_on" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="class_name" ColumnName="class_name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="monitoring_services_jobs">
+      <EntityTypeMapping TypeName="MonitoringModel.monitoring_services_jobs">
+        <MappingFragment StoreEntitySet="monitoring_services_jobs">
+          <ScalarProperty Name="updated_on" ColumnName="updated_on" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="notify_on_failure" ColumnName="notify_on_failure" />
+          <ScalarProperty Name="monitoring_services_id" ColumnName="monitoring_services_id" />
+          <ScalarProperty Name="execute_job" ColumnName="execute_job" />
+          <ScalarProperty Name="cron" ColumnName="cron" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="display_name" ColumnName="display_name" />
+          <ScalarProperty Name="port" ColumnName="port" />
+          <ScalarProperty Name="passwrd" ColumnName="passwrd" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="host" ColumnName="host" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="monitoring_services_responses">
+      <EntityTypeMapping TypeName="MonitoringModel.monitoring_services_responses">
+        <MappingFragment StoreEntitySet="monitoring_services_responses">
+          <ScalarProperty Name="updated_on" ColumnName="updated_on" />
+          <ScalarProperty Name="created_on" ColumnName="created_on" />
+          <ScalarProperty Name="monitoring_services_jobs_id" ColumnName="monitoring_services_jobs_id" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="miliseconds_response" ColumnName="miliseconds_response" />
+          <ScalarProperty Name="port" ColumnName="port" />
+          <ScalarProperty Name="passwrd" ColumnName="passwrd" />
+          <ScalarProperty Name="is_successful" ColumnName="is_successful" />
+          <ScalarProperty Name="host" ColumnName="host" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
