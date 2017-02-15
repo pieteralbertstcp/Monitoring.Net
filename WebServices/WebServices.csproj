@@ -375,9 +375,9 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Services\Services.csproj">
+    <ProjectReference Include="..\Services\MonitoringServices.csproj">
       <Project>{4624951c-8ad6-4679-8b65-73588037aeac}</Project>
-      <Name>Services</Name>
+      <Name>MonitoringServices</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -12,6 +12,8 @@ namespace Repositories
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+
+    protected monitoringEntities _db        
     
     public partial class monitoringEntities : DbContext
     {
