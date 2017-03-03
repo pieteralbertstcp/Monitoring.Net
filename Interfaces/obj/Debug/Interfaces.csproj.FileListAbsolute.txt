@@ -25,3 +25,7 @@ C:\DEV\Monitoring.Net\Interfaces\obj\Debug\Interfaces.csprojResolveAssemblyRefer
 C:\DEV\Monitoring.Net\Interfaces\obj\Debug\Interfaces.dll
 C:\DEV\Monitoring.Net\Interfaces\obj\Debug\Interfaces.pdb
 C:\DEV\Monitoring.Net\Interfaces\bin\Debug\MySql.Data.dll
+C:\DEV\Monitoring.Net\Interfaces\bin\Debug\Repositories.dll
+C:\DEV\Monitoring.Net\Interfaces\bin\Debug\EntityFramework.dll
+C:\DEV\Monitoring.Net\Interfaces\bin\Debug\Repositories.pdb
+C:\DEV\Monitoring.Net\Interfaces\bin\Debug\EntityFramework.xml

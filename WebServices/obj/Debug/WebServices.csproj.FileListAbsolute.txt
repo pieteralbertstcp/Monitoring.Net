@@ -191,3 +191,5 @@ C:\DEV\Monitoring.Net\WebServices\obj\Debug\WebServices.csprojResolveAssemblyRef
 C:\DEV\Monitoring.Net\WebServices\obj\Debug\WebServices.dll
 C:\DEV\Monitoring.Net\WebServices\obj\Debug\WebServices.pdb
 C:\DEV\Monitoring.Net\WebServices\bin\MySql.Data.dll
+C:\DEV\Monitoring.Net\WebServices\bin\Repositories.dll
+C:\DEV\Monitoring.Net\WebServices\bin\Repositories.pdb

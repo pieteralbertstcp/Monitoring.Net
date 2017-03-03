@@ -19,3 +19,5 @@ C:\DEV\Monitoring.Net\Services\bin\Debug\zh\Hangfire.Core.resources.dll
 C:\DEV\Monitoring.Net\Services\obj\Debug\MonitoringServices.csprojResolveAssemblyReference.cache
 C:\DEV\Monitoring.Net\Services\obj\Debug\Services.dll
 C:\DEV\Monitoring.Net\Services\obj\Debug\Services.pdb
+C:\DEV\Monitoring.Net\Services\bin\Debug\Repositories.dll
+C:\DEV\Monitoring.Net\Services\bin\Debug\Repositories.pdb

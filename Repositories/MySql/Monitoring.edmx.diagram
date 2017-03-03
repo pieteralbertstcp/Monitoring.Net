@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4d1f200cffe34c3f8048efc2727706f1" Name="Diagram1" >
+        <EntityTypeShape EntityType="MonitoringModel.config_attributes" Width="1.5" PointX="0.75" PointY="6" />
+        <EntityTypeShape EntityType="MonitoringModel.config_attributes_values" Width="1.5" PointX="3" PointY="5.875" />
+        <EntityTypeShape EntityType="MonitoringModel.monitoring_services" Width="2" PointX="0.5" PointY="1.875" />
+        <EntityTypeShape EntityType="MonitoringModel.monitoring_services_jobs" Width="2.125" PointX="3.5" PointY="1" />
+        <EntityTypeShape EntityType="MonitoringModel.monitoring_services_responses" Width="3.375" PointX="6.125" PointY="1.375" />
+        <AssociationConnector Association="MonitoringModel.config_attributes_foreign_keys" />
+        <AssociationConnector Association="MonitoringModel.monitoring_services_jobs_ibfk_1" />
+        <AssociationConnector Association="MonitoringModel.monitoring_services_responses_ibfk_1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

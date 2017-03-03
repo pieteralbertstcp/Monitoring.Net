@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Net;
-using Interfaces.Services;
+using Interfaces.ServicesInterfaces;
 using Models.ServicesModels;
+using Repositories.MySql;
 
 namespace Services.MonitoringServices
 {
@@ -14,7 +15,7 @@ namespace Services.MonitoringServices
         /// </summary>
         /// <param name="jobDetials"></param>
         /// <returns>MonitoringServiceResponse</returns>
-        public MonitoringServiceResponse Execute(MonitoringServiceJob jobDetials)
+        public MonitoringServiceResponse Execute(monitoring_services_responses jobDetials)
         {
             var response = new MonitoringServiceResponse();
             response.Id = Guid.NewGuid().ToString();
@@ -22,9 +23,9 @@ namespace Services.MonitoringServices
             stopwatch.Start();
             try
             {
-                var request = (FtpWebRequest)WebRequest.Create("ftp://" + jobDetials.Host);
+                var request = (FtpWebRequest)WebRequest.Create("ftp://" + jobDetials.host);
                 request.Method = WebRequestMethods.Ftp.ListDirectory;
-                request.Credentials = new NetworkCredential(jobDetials.Username, jobDetials.Password);
+                request.Credentials = new NetworkCredential("USERNAME ", jobDetials.passwrd);
                 var ftpResponse = (FtpWebResponse)request.GetResponse();
                 response.IsSuccessful = true;
                 response.Message = ftpResponse.StatusCode + " " + ftpResponse.StatusDescription;

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Net;
-using Interfaces.Services;
+using Interfaces.ServicesInterfaces;
 using Models.ServicesModels;
+using Repositories.MySql;
 
 namespace Services.MonitoringServices
 {
@@ -13,12 +14,12 @@ namespace Services.MonitoringServices
         /// </summary>
         /// <param name="jobDetails"></param>
         /// <returns></returns>
-        public MonitoringServiceResponse Execute(MonitoringServiceJob jobDetails)
+        public MonitoringServiceResponse Execute(monitoring_services_responses jobDetails)
         {
             var result = new MonitoringServiceResponse
             {
                 Id = Guid.NewGuid().ToString(),
-                Host = jobDetails.Host
+                Host = jobDetails.host
             };
 
             var stopwatch = new Stopwatch();
@@ -26,7 +27,7 @@ namespace Services.MonitoringServices
 
             try
             {
-                var req = (HttpWebRequest)WebRequest.Create(jobDetails.Host);
+                var req = (HttpWebRequest)WebRequest.Create(jobDetails.host);
                 var response = (HttpWebResponse)req.GetResponse();
                 result.IsSuccessful = response.StatusCode == HttpStatusCode.OK;
                 result.Message = response.StatusCode.ToString();

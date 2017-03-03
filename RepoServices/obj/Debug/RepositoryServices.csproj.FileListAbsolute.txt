@@ -1,0 +1,12 @@
+C:\DEV\Monitoring.Net\RepoServices\obj\Debug\RepositoryServices.csprojResolveAssemblyReference.cache
+C:\DEV\Monitoring.Net\RepoServices\bin\Debug\RepoServices.dll.config
+C:\DEV\Monitoring.Net\RepoServices\bin\Debug\RepoServices.dll
+C:\DEV\Monitoring.Net\RepoServices\bin\Debug\RepoServices.pdb
+C:\DEV\Monitoring.Net\RepoServices\bin\Debug\EntityFramework.dll
+C:\DEV\Monitoring.Net\RepoServices\bin\Debug\EntityFramework.SqlServer.dll
+C:\DEV\Monitoring.Net\RepoServices\bin\Debug\Repositories.dll
+C:\DEV\Monitoring.Net\RepoServices\bin\Debug\Repositories.pdb
+C:\DEV\Monitoring.Net\RepoServices\bin\Debug\EntityFramework.xml
+C:\DEV\Monitoring.Net\RepoServices\bin\Debug\EntityFramework.SqlServer.xml
+C:\DEV\Monitoring.Net\RepoServices\obj\Debug\RepoServices.dll
+C:\DEV\Monitoring.Net\RepoServices\obj\Debug\RepoServices.pdb

@@ -1,10 +1,11 @@
 ﻿using Models.ServicesModels;
+using Repositories.MySql;
 
-namespace Interfaces.Services
+namespace Interfaces.ServicesInterfaces
 
 {
     public interface IBasicService
     {
-        MonitoringServiceResponse Execute(MonitoringServiceJob jobDetails);
+        MonitoringServiceResponse Execute(monitoring_services_responses jobDetails);
     }
 }

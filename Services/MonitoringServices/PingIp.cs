@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Net.NetworkInformation;
-using Interfaces.Services;
+using Interfaces.ServicesInterfaces;
 using Models.ServicesModels;
+using Repositories.MySql;
 
 namespace Services.MonitoringServices
 {
@@ -13,17 +14,17 @@ namespace Services.MonitoringServices
         /// </summary>
         /// <param name="jobDetails"></param>
         /// <returns></returns>
-        public MonitoringServiceResponse Execute(MonitoringServiceJob jobDetails)
+        public MonitoringServiceResponse Execute(monitoring_services_responses jobDetails)
         {
             var response = new MonitoringServiceResponse();
             response.Id = Guid.NewGuid().ToString();
-            response.Host = jobDetails.Host;
+            response.Host = jobDetails.host;
             var stopwatch = new Stopwatch();
             stopwatch.Start();
 
             try
             {
-                var pingReply = new Ping().Send(jobDetails.Host);
+                var pingReply = new Ping().Send(jobDetails.host);
                 response.IsSuccessful = pingReply != null && pingReply.Status == IPStatus.Success;
                 if (pingReply != null) response.Message = pingReply.Status.ToString();
             }

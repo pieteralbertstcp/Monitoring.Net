@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using Hangfire;
 using Models.emaill;
 using Models.ServicesModels;
+using Repositories.MySql;
 using Services.MonitoringServices;
 
 namespace Services
@@ -14,7 +15,7 @@ namespace Services
     /// <summary>
     /// Used to send out email notifications.
     /// </summary>
-    public class Mail
+    public static class Mail
     {
         #region  public methods
         /// <summary>
@@ -56,6 +57,26 @@ namespace Services
                 return Regex.Replace(email, expresion, string.Empty).Length == 0;
             }
             return false;
+        }
+
+        /// <summary>
+        /// Fetch a email template from the database
+        /// </summary>
+        /// <param name="templateNumber"></param>
+        /// <returns></returns>
+        public static string GetEmailBodyTemplate(int templateNumber = 1)
+        {
+            return null;
+        }
+        
+        /// <summary>
+        /// Fetch a email template from the database
+        /// </summary>
+        /// <param name="templateName"></param>
+        /// <returns></returns>
+        public static string GetEmailBodyTemplate(string templateName = "default")
+        {
+            return null;
         }
 
         #endregion
@@ -124,8 +145,7 @@ namespace Services
         /// <returns></returns>
         private static bool IsProviderActive(string emailHostName)
         {
-            var result = new PingIp().Execute(new MonitoringServiceJob { Host = emailHostName });
-            return result.IsSuccessful;
+          return true;
         }
 
         #endregion

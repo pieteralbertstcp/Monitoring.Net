@@ -60,53 +60,57 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="config_attributes.cs">
+    <Compile Include="MySql\config_attributes.cs">
       <DependentUpon>Monitoring.tt</DependentUpon>
     </Compile>
-    <Compile Include="config_attributes_values.cs">
+    <Compile Include="MySql\config_attributes_values.cs">
       <DependentUpon>Monitoring.tt</DependentUpon>
     </Compile>
-    <Compile Include="Monitoring.Context.cs">
+    <Compile Include="MySql\Monitoring.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Monitoring.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Monitoring.cs">
+    <Compile Include="MySql\Monitoring.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Monitoring.tt</DependentUpon>
     </Compile>
-    <Compile Include="Monitoring.Designer.cs">
+    <Compile Include="MySql\Monitoring.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Monitoring.edmx</DependentUpon>
     </Compile>
-    <Compile Include="monitoring_services.cs">
+    <Compile Include="MySql\MonitoringDbContext.cs" />
+    <Compile Include="MySql\MonitoringService.cs" />
+    <Compile Include="MySql\MonitoringServiceJobService.cs" />
+    <Compile Include="MySql\MonitoringServiceResponseService.cs" />
+    <Compile Include="MySql\monitoring_services.cs">
       <DependentUpon>Monitoring.tt</DependentUpon>
     </Compile>
-    <Compile Include="monitoring_services_jobs.cs">
+    <Compile Include="MySql\monitoring_services_jobs.cs">
       <DependentUpon>Monitoring.tt</DependentUpon>
     </Compile>
-    <Compile Include="monitoring_services_responses.cs">
+    <Compile Include="MySql\monitoring_services_responses.cs">
       <DependentUpon>Monitoring.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <EntityDeploy Include="Monitoring.edmx">
+    <EntityDeploy Include="MySql\Monitoring.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Monitoring.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Monitoring.Context.tt">
+    <None Include="MySql\Monitoring.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Monitoring.edmx</DependentUpon>
       <LastGenOutput>Monitoring.Context.cs</LastGenOutput>
     </None>
-    <None Include="Monitoring.edmx.diagram">
+    <None Include="MySql\Monitoring.edmx.diagram">
       <DependentUpon>Monitoring.edmx</DependentUpon>
     </None>
-    <None Include="Monitoring.tt">
+    <None Include="MySql\Monitoring.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Monitoring.edmx</DependentUpon>
       <LastGenOutput>Monitoring.cs</LastGenOutput>
